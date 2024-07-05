@@ -1,0 +1,25 @@
+name: machine_learning
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - pytorch
+  - diffusers
+  - jupyter
+  - ipython
+  - ipykernel
+  - opencv
+  - plotly
+  - beautifulsoup4
+  - requests
+  - scipy
+  - scikit-image
+  - pip
+  #- pip:
+      #- some-pip-package  # If you have any additional pip packages, add them here
