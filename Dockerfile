@@ -21,6 +21,15 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
+# Generate Jupyter configuration file
+RUN jupyter notebook --generate-config
+
+# Modify Jupyter configuration for no password and no token
+RUN echo "c.NotebookApp.token = ''" >> ~/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.password = ''" >> ~/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.allow_remote_access = True" >> ~/.jupyter/jupyter_notebook_config.py
+
 # Make port 8888 available to the world outside this container
 EXPOSE 8888
 
