@@ -8,6 +8,7 @@ dependencies:
   - numpy
   - scikit-learn
   - matplotlib
+  - nbconvert
   - seaborn
   - pytorch
   - diffusers
